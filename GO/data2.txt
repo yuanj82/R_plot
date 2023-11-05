@@ -1,0 +1,32 @@
+Term	Fold Enrichment		PValue	Count
+ribonucleoprotein complex biogenesis	0.0644 		1.43E-74	310
+mRNA processing	0.0619 		1.19E-58	298
+ribosome biogenesis	0.0428 		5.89E-56	206
+Golgi vesicle transport	0.0409 		3.24E-50	197
+RNA splicing	0.0557 		1.48E-48	268
+cytoplasmic translation	0.0264 		2.50E-46	127
+rRNA processing	0.0322 		8.50E-45	155
+establishment of protein localization to organelle	0.0532 		1.67E-44	256
+rRNA metabolic process	0.0353 		2.61E-42	170
+focal adhesion	0.0617 		2.26E-92	304
+cell-substrate junction	0.0619 		4.74E-89	305
+ribosomal subunit	0.0314 		2.66E-63	155
+mitochondrial matrix	0.0594 		4.55E-62	293
+ribosome	0.0357 		8.66E-61	176
+mitochondrial protein-containing complex	0.0416 		3.91E-56	205
+chromosomal region	0.0450 		4.84E-41	222
+mitochondrial inner membrane	0.0527 		4.53E-39	260
+large ribosomal subunit	0.0191 		1.16E-37	94
+spliceosomal complex	0.0268 		4.09E-35	132
+organellar ribosome	0.0156 		4.93E-34	77
+cadherin binding	0.0483 		2.42E-65	237
+structural constituent of ribosome	0.0288 		3.01E-49	141
+ribonucleoprotein complex binding	0.0224 		2.13E-28	110
+ATP hydrolysis activity	0.0389 		9.16E-24	191
+GTPase binding	0.0320 		1.13E-20	157
+ubiquitin-like protein ligase binding	0.0326 		3.05E-19	160
+small GTPase binding	0.0288 		1.05E-18	141
+isomerase activity	0.0188 		5.40E-18	92
+translation factor activity, RNA binding	0.0122 		1.38E-17	60
+catalytic activity, acting on RNA	0.0373 		3.14E-17	183
+electron transfer activity	0.0157 		3.20E-17	77
