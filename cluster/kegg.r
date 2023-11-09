@@ -1,18 +1,28 @@
 library(clusterProfiler)
+library(org.Hs.eg.db)
 
 genes <- read.delim(
-    'human_genes.txt',
+    'id_e.txt',
     header = TRUE,
     stringsAsFactors = FALSE
 )[[1]]
 
-enrich.kegg <- enrichKEGG(
+kegg <- enrichKEGG(
     gene = genes,
-    OrgDb = org.Hs.eg.db,
+    organism = 'hsa',
     keyType = 'kegg',
-    ont = 'ALL',
     pAdjustMethod = 'fdr',
     pvalueCutoff = 0.05,
-    qvalueCutoff = 0.2,
-    readable = FALSE
+    qvalueCutoff = 0.05,
 )
+
+write.table(
+    kegg,
+    'entich.kegg.txt',
+    sep = '\t',
+    row.names = FALSE,
+    quote = FALSE
+)
+
+barplot(kegg)  #富集柱形图
+dotplot(kegg)  #富集气泡图
