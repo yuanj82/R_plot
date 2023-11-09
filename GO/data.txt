@@ -1,8 +1,0 @@
-Term	Fold Enrichment	PValue	Count
-Zinc ion binding	26.68658892	2.43E+01	18
-Protein ubiquitination	26.02004717	2.61E+00	3
-Stress response	19.34713376	2.21E+01	18
-DNA binding	9.239498408	9.67E+00	13
-Ubiquitin protein transferase activity	14.32472613	1.79E+00	3
-Zinc	3.47833935	9.23E+00	18
-Metal binding	1.999654099	5.13E+00	18

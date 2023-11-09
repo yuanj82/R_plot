@@ -56,7 +56,7 @@ library(pheatmap)
 # )
 # rownames(annotation_col) <- colnames(data)  # 设置为行的注释
 
-data <- read.table('./LP_Cd_HMA.txt', header = TRUE,  sep = '\t',  row.names = 1 )
+data <- read.table('./data.txt', header = TRUE,  sep = '\t',  row.names = 1 )
 data <- as.data.frame(data)
 data = data[rowSums(data)>10, ]
 

@@ -16,7 +16,7 @@ library(dplyr)
 library(ggplot2)
 library(ggrepel)
 
-GO_data <- read.table('./data2.txt', header = TRUE,  sep = '\t')
+GO_data <- read.table('./data.txt', header = TRUE,  sep = '\t')
 
 GO_data <- arrange(GO_data, GO_data[,3])
 
