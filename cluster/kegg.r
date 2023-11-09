@@ -2,7 +2,7 @@ library(clusterProfiler)
 library(org.Hs.eg.db)
 
 genes <- read.delim(
-    'id_e.txt',
+    'g_id.txt',
     header = TRUE,
     stringsAsFactors = FALSE
 )[[1]]
