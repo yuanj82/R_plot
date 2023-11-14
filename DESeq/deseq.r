@@ -1,7 +1,7 @@
 library(DESeq2)
 
 counts = read.csv(
-    'gene.counts', 
+    'gene2.counts', 
     header = T,  
     sep = '\t', 
     row.names = "Geneid", 
@@ -17,7 +17,7 @@ counts = counts[rowSums(counts)>10, ]
 
 samples = data.frame(
     sampleID = c("C0_1", "C0_2", "C0_3", "C50_1", "C50_2", "C50_3", "C500_1", "C500_2", "C500_3"), 
-    sample = c("sample1", "sample2", "sample3", "sample1", "sample2", "sample3", "sample1", "sample2", "sample3")
+    sample = c("sample1", "sample1", "sample1", "sample2", "sample2", "sample2", "sample3", "sample3", "sample3")
 )
 
 # 按照sampleID更改samples的行名
