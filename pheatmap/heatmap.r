@@ -1,8 +1,8 @@
 library(pheatmap)
-# library(showtext)
+library(showtext)
 
-# font_add("times", "/usr/share/fonts/TTF/times.ttf")  # 添加新罗马字体
-# showtext_auto()  # 始终启用字体
+font_add("Times_New_Roman", "/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf")  # 添加新罗马字体
+showtext_auto()  # 始终启用字体
 
 # data <- read.table('./LP_Cd.txt', header = TRUE,  sep = '\t',  row.names = 1 ) # 读取数据，第一列为行名
 # data <- as.data.frame(data) # 将数据转换为数据框格式
@@ -65,24 +65,36 @@ data = data[rowSums(data)>10, ]
 # )
 # rownames(annotation_row) <- rownames(data)
 
-# annotation_col <- data.frame(
-#   type = rep(c("C0", "C50", "C500"), each = 3)
-# )
-# rownames(annotation_col) <- colnames(data)
+annotation_col <- data.frame(
+  type = rep(c("C0", "C50", "C500"), each = 3)
+)
+rownames(annotation_col) <- colnames(data)
 
-pheatmap(data,
+p <- pheatmap(data,
   scale = "row", 
   # show_rownames = FALSE,
   cluster_cols = FALSE, 
   # cluster_rows = FALSE,
   clustering_method = 'ward.D',
-  cellwidth = 15, 
+  cellwidth = 30, 
   cellheight = 10, 
   # color = rainbow(6), 
   # cellheight = 20, 
   # gaps_col = c(3, 3),
+  fontfamily = "Times_New_Roman",
   angle_col = 45,
   # annotation_row = annotation_row, 
-  # annotation_col = annotation_col, 
-  # # annotation_legend = FALSE # 取消注释的图例
+  annotation_col = annotation_col, 
+  # annotation_legend = FALSE # 取消注释的图例
   )
+
+save_pheatmap_pdf <- function(x, filename, width=15, height=15) {
+   stopifnot(!missing(x))
+   stopifnot(!missing(filename))
+   pdf(filename, width=width, height=height)
+   grid::grid.newpage()
+   grid::grid.draw(x$gtable)
+   dev.off()
+}
+
+save_pheatmap_pdf(p, "result.pdf")
