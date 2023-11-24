@@ -31,12 +31,12 @@ dds = DESeqDataSetFromMatrix(countData = counts, colData = samples, design = ~sa
 
 # 计算差异倍数并获得 p 值
 # parallel = TRUE 可以多线程运行，在数据量较大时建议开启
-dds1 <- DESeq(dds, fitType = 'mean', minReplicatesForReplace = 7, parallel = FALSE)
+dds_count <- DESeq(dds, fitType = 'mean', minReplicatesForReplace = 7, parallel = FALSE)
 
 # 查看样本上调还是下调
-sampl1_vs_sample2 <- results(dds1, contrast = c('sample', 'sample1', 'sample2'))
+sampl1_vs_sample2 <- results(dds_count, contrast = c('sample', 'sample1', 'sample2'))
 
-sampl1_vs_sample3 <- results(dds1, contrast = c('sample', 'sample2', 'sample3'))
+sampl1_vs_sample3 <- results(dds_count, contrast = c('sample', 'sample2', 'sample3'))
 
 result1 <- data.frame(sampl1_vs_sample2, stringsAsFactors = FALSE, check.names = FALSE)
 result2 <- data.frame(sampl1_vs_sample3, stringsAsFactors = FALSE, check.names = FALSE)
