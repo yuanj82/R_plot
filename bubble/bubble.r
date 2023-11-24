@@ -56,4 +56,4 @@ p <- ggplot(
 plot <- p + mytheme
 plot
 
-ggsave(plot, filename = "GO.png", width = 7, height = 7, dpi = 300)
+ggsave(plot, filename = "bubble.png", width = 7, height = 7, dpi = 300)
