@@ -1,7 +1,24 @@
+# 数据示例：
+# Term	Fold Enrichment		PValue	Count
+# ribonucleoprotein complex biogenesis	0.0644 		1.43E-74	310
+# mRNA processing	0.0619 		1.19E-58	298
+# ribosome biogenesis	0.0428 		5.89E-56	206
+# Golgi vesicle transport	0.0409 		3.24E-50	197
+# RNA splicing	0.0557 		1.48E-48	268
+# cytoplasmic translation	0.0264 		2.50E-46	127
+# rRNA processing	0.0322 		8.50E-45	155
+# establishment of protein localization to organelle	0.0532 		1.67E-44	256
+# rRNA metabolic process	0.0353 		2.61E-42	170
+# focal adhesion	0.0617 		2.26E-92	304
+# cell-substrate junction	0.0619 		4.74E-89	305
+
+setwd('/home/hieroglyphs/work/R_plot/DESeq')
+rm(list = ls())  
+Sys.setenv(LANGUAGE = "en")
+
 library(stats) # Arch中需要先加载这些包
 library(base)
 library(showtext)
-
 font_add("Times_New_Roman", "/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf")  # 添加新罗马字体
 showtext_auto()
 # Attaching package: ‘dplyr’
